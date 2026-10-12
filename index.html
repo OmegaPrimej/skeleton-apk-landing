@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skeleton APK – Download</title>
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --primary-dark: #1d4ed8;
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    header { padding: 1.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .logo { font-size: 1.4rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--primary); }
+    .hero {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+      align-items: center; padding: 4rem 0 5rem;
+    }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; text-align: center; padding: 2.5rem 0 3rem; }
+    }
+    .hero-content h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 800;
+      line-height: 1.15; margin-bottom: 1.2rem;
+    }
+    .hero-content h1 span {
+      background: linear-gradient(135deg, #60a5fa, #3b82f6);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-content p { color: var(--muted); font-size: 1.15rem; margin-bottom: 2rem; max-width: 480px; }
+    @media (max-width: 768px) { .hero-content p { margin-left: auto; margin-right: auto; } }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: var(--primary); color: white; font-weight: 600;
+      font-size: 1.05rem; padding: 0.9rem 1.8rem; border-radius: 12px;
+      text-decoration: none; box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+    }
+    .hero-image img {
+      width: 100%; max-width: 480px; border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); display: block; margin: 0 auto;
+    }
+    .features { padding: 3rem 0 5rem; }
+    .section-title { text-align: center; font-size: 1.8rem; font-weight: 700; margin-bottom: 2.5rem; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+    .feature-card {
+      background: var(--card); border-radius: 16px; padding: 1.8rem;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .feature-card .icon {
+      width: 48px; height: 48px; background: rgba(59,130,246,0.15);
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.2rem; font-size: 1.4rem;
+    }
+    .feature-card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+    .feature-card p { color: var(--muted); font-size: 0.95rem; }
+    .download-section {
+      background: linear-gradient(135deg, #1e3a8a, #1e40af);
+      border-radius: 24px; padding: 3rem 2rem; text-align: center; margin-bottom: 4rem;
+    }
+    .download-section h2 { font-size: 1.8rem; margin-bottom: 0.8rem; }
+    .download-section p { color: rgba(255,255,255,0.85); margin-bottom: 1.8rem; }
+    .file-info {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(0,0,0,0.25); padding: 0.4rem 1rem; border-radius: 999px;
+      font-size: 0.9rem; margin-bottom: 1.5rem;
+    }
+    footer { text-align: center; padding: 2rem 0; color: var(--muted); font-size: 0.9rem; }
+    footer a { color: var(--primary); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="#" class="logo">Skeleton<span>APK</span></a>
+    </div>
+  </header>
+  <main>
+    <section class="hero container">
+      <div class="hero-content">
+        <h1>Your <span>Skeleton APK</span><br>is ready</h1>
+        <p>A clean starter Android application package. Download the debug build and start building on top of it.</p>
+        <a href="app-debug.apk" class="btn" download>Download APK</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80" alt="Smartphone">
+      </div>
+    </section>
+    <section class="features container">
+      <h2 class="section-title">What's included</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="icon">📱</div>
+          <h3>Debug Build</h3>
+          <p>Ready-to-install APK. Perfect for testing and development.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">⚡</div>
+          <h3>Lightweight Skeleton</h3>
+          <p>Minimal starting point so you can focus on features.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🔧</div>
+          <h3>Easy to Extend</h3>
+          <p>Clean foundation. Drop in your modules and resources.</p>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="download-section">
+        <h2>Get the APK now</h2>
+        <p>Direct download. No sign-up required.</p>
+        <div class="file-info">📄 app-debug.apk · \~4.0 MB</div>
+        <br>
+        <a href="app-debug.apk" class="btn" download>Download app-debug.apk</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>Free image from Unsplash · Skeleton APK Landing</p>
+    </div>
+  </footer>
+</body>
+</html>
